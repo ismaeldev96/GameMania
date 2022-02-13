@@ -1,0 +1,503 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/***** Gerais ******/
+.container-grid {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+html, body {
+    height: 100%;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+.corpoConteudo{
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+}
+#next{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.corpoPaginas {
+    /*padding: 10px 0 30px;*/
+    flex: 1 0 auto;
+}
+/***** cabecalho - header ****/
+header{}
+header .header-mobile nav {
+    display: none;
+}
+header .header-mobile nav.activeMenu {
+    display: block;
+}
+header .header-mobile .navMobile{
+    /* display: none; */
+    width: 100%;
+    background-color: #0D0D0D;
+    position: absolute;
+    z-index: 1;
+    padding: 5px 15px 3px;
+}
+header .header-mobile .navMobile li{
+    border-bottom: 2px dashed #2B2B2B;
+}
+header .header-mobile .navMobile li a{
+    display: block;
+    font-size: 16px;
+    color: #FFF;
+    padding: 0.5rem 0;
+}
+header .header-mobile{
+    background-color:  #0D0D0D;
+}
+header .header-mobile .header-mobile__top{
+    display: flex;
+    justify-content:  space-between;
+    padding: 5px;
+}
+header .header-mobile .header-mobile__top .top-left{}
+header .header-mobile .header-mobile__top .top-left button{
+    background-color:  #0D0D0D;
+    border: none;
+}
+header .header-mobile .header-mobile__top .top-left button i{
+    font-size: 150%;
+    color: white;
+}
+header .header-mobile .header-mobile__top .top-left a.logo {
+    margin-left: 5px;
+    color: white;
+}
+header .header-mobile .header-mobile__top .top-right{}
+header .header-mobile .header-mobile__top .top-right a{
+    color: white;
+}
+header .header-mobile .header-mobile__top .top-right a i{
+    font-size: 120%;
+    margin: 0 5px;
+}
+header .header-mobile .header-mobile__search{
+    padding: 3px;
+}
+header .header-mobile .header-mobile__search .mobile--search{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    padding: 10px 5px 8px;
+}
+header .header-mobile .header-mobile__search .mobile--search input{
+    width: 80%;
+    border: none;
+    font-size: 1.2rem;
+    color: #6A6A6A;
+}
+header .header-mobile .header-mobile__search .mobile--search input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+header .header-mobile .header-mobile__search .mobile--search button{
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+}
+header .header-mobile .header-mobile__search .mobile--search button i{
+    font-size: 153%;
+}
+
+header .header-desk{
+    display: none;
+}
+header .header-desk .headerTop{
+    background-color: #0D0D0D;
+}
+header .header-desk .headerTop .headerRedesSociais {
+    display: flex;
+    align-items: center;
+}
+header .header-desk .headerTop .headerRedesSociais a,
+header .header-desk .headerTop .headerAreaCliente a{
+    display: inline-block;
+    padding: 5px;
+    color: #FFF;
+}
+header .header-desk .headerTop .headerRedesSociais a:hover {
+    background-color: red;
+}
+header .header-desk .headerTop .headerRedesSociais a i{
+    font-size: 130%;
+}
+header .header-desk .headerTop .headerAreaCliente{
+    display: flex;
+    align-items: center;
+}
+header .header-desk .headerTop .headerAreaCliente a{}
+header .header-desk .headerTop .headerAreaCliente a i{}
+
+header .header-desk .headerCenter{
+    background-color: rgb(39, 39, 39);
+    padding: 0.5rem 0;
+}
+header .header-desk .headerCenter .logo{}
+header .header-desk .headerCenter .logo a{}
+header .header-desk .headerCenter .logo a img{}
+header .header-desk .headerCenter .busca{
+    width: 60%;
+}
+header .header-desk .headerCenter .busca .campo_busca{
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF;
+}
+header .header-desk .headerCenter .busca .campo_busca input{
+    outline: none;
+    width: 90%;
+    font-size: 1rem;
+    border: none;
+    margin: 5px 10px;
+}
+header .header-desk .headerCenter .busca .campo_busca button{
+    font-size: 1rem;
+    background-color: #FFF;
+    border: none;
+    /*padding: 0 10px;*/
+    margin-right: 10px;
+}
+header .header-desk .headerCenter .busca .campo_busca button i{}
+header .header-desk .headerCenter .usuario{
+    width: 20%;
+}
+header .header-desk .headerCenter .usuario a{
+    font-size: 1rem;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+header .header-desk .headerCenter .usuario a i{
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+header .header-desk .headerCenter .usuario .iUser{}
+
+header .header-desk .navMenu{
+    background-color: rgb(173, 2, 2);
+}
+header .header-desk .navMenu a,
+header .header-desk .navMenu button{
+    text-transform: uppercase;
+    color: #FFF;
+}
+header .header-desk .navMenu a{
+    display:  inline-block;
+    padding: 0.5rem;
+    font-weight:400;
+}
+header .header-desk .navMenu button{
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: transparent;
+    padding: 3px;
+    border: none;
+}
+header .header-desk .navMenu button i{
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+header .header-desk .navMenu a{}
+
+/**** banner ****/
+section.banner {
+    width: 100%;
+    height: 150px;
+    background: url(../img/banner-mobile.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/***** conteudo principal home ****/
+header.headConteudo {
+    background-color: #D90404;
+}
+header.headConteudo h2{
+    font-size: 120%;
+    padding: 7px 8px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+section.principaisOfertas .maisOfertas{
+    width: 90%;
+    padding: 2% 5%;
+    margin: 14px auto 0;
+    border-radius: 5px;
+    background-color: red;
+    border: 2px solid #a30000;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 107%;
+    display: block;
+    text-align: center;
+}
+section.principaisOfertas{
+    margin: 10px 0 0px;
+    padding: 0 0 20px;
+}
+section.principaisOfertas .row{}
+section.principaisOfertas .row .cardProduto{
+    display: flex;
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #FFF;
+    /*border: thin solid #AAA;*/
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #6A6A6A;
+    width: 100%;
+}
+section.principaisOfertas .row .cardProduto header{
+    width: 45%;
+}
+section.principaisOfertas .row .cardProduto header .cardProdutoClassificacao{
+    width: 100%;
+    color: red;
+    margin-bottom: 10px;
+}
+section.principaisOfertas .row .cardProduto header img{
+    width: 100%;
+}
+section.principaisOfertas .row .cardProduto div {
+    width: 60%;
+}
+section.principaisOfertas .row .cardProduto div .cardProdutoInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 76%;
+}
+section.principaisOfertas .row .cardProduto div .cardProdutoInfo h3.produto_titulo{
+    font-size: 0.9rem;
+    color: #7d7d7d;
+}
+section.principaisOfertas .row .cardProduto div .cardProdutoInfo span{
+    color: #AAA;
+    font-size: 0.7rem;
+}
+section.principaisOfertas .row .cardProduto div .cardProdutoInfo strong{
+    color: red;
+    font-size: 120%;
+}
+section.principaisOfertas .row .cardProduto div .btnPagamento{
+    font-size: 1rem;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    background-color: #FF0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 25px;
+}
+/***** rodape - footer ****/
+footer {}
+footer .rodapeSelos {
+    max-width: 1300px;
+    background-color: #6A6A6A;
+    text-align: center;
+    padding: 10px 5px;
+}
+footer .rodapeSelos .formasPagamento {}
+footer .rodapeSelos .formasPagamento h4 {
+    color: white;
+    font-weight: 400;
+}
+footer .rodapeSelos .formasPagamento img {
+    width: 90%;
+    margin-top: 15px;
+}
+footer .rodapeSelos .certificadoSeguranca {}
+footer .rodapeSelos .certificadoSeguranca h4{
+    margin-top: 15px;
+    color: white;
+    font-weight: 400;
+}
+footer .rodapeSelos .certificadoSeguranca div{}
+footer .rodapeSelos .certificadoSeguranca div a{}
+footer .rodapeSelos .certificadoSeguranca div a img{
+    /*width: 15%;*/
+    margin: 15px 5px 0;
+}
+
+footer .rodapeInstitucional {
+    background-color: black;
+    padding: 10px 8px;
+
+}
+footer .rodapeInstitucional div{}
+footer .rodapeInstitucional div h4{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 0;
+}
+footer .rodapeInstitucional div ul{
+    display: none;
+}
+footer .rodapeInstitucional div ul li{
+    padding: 5px 0;
+}
+footer .rodapeInstitucional div ul li a{
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer .rodapeMidiasSociais {
+    background-color: #2B2B2B;
+    text-align: center;
+    padding: 15px 0;
+}
+footer .rodapeMidiasSociais h3{
+    color: #FF0000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 550;
+}
+footer .rodapeMidiasSociais a{}
+footer .rodapeMidiasSociais a i{
+    font-size: 2rem;
+    margin: 0 5px;
+    color: white;
+}
+
+footer .rodapeFinal{ 
+    padding-top: 40px;
+    background-color: black;
+    text-align: center;
+}
+footer .rodapeFinal figure{}
+footer .rodapeFinal figure a{}
+footer .rodapeFinal figure a img{
+    margin: 0 auto;
+}
+footer .rodapeFinal p{ 
+    padding-top: 30px;
+    padding-bottom: 40px;
+    color: white;
+    font-size: 12px;
+}
+footer .rodapeFinal p a{
+    color: white;
+    font-weight: bold;
+}
+/*** class para estetica generica ****/
+.txt-thr {
+    text-decoration: line-through;
+}
+.d-flex {
+    display: flex;
+}
+
+.d-flex-between{
+    justify-content: space-between;
+}
+.alignItems-center {
+    align-items: center;
+}
+.row {
+    margin: 0 auto;
+}
+/****** Medias Querys *****/
+@media screen and (max-width: 470px){
+    footer .rodapeInstitucional .d-flex {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 470px){
+    section.principaisOfertas .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    section.principaisOfertas .row .cardProduto{
+        width: 48%;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    section.principaisOfertas .row .cardProduto header{
+        width: 100%;
+        padding: 10px 10px 0;
+
+    }
+    section.principaisOfertas .row .cardProduto div {
+        width: 100%;
+        
+    }
+    section.principaisOfertas .row .cardProduto div .cardProdutoInfo{
+        padding: 0px 10px;
+    }
+}
+@media screen and (min-width: 515px){
+    section.principaisOfertas .row{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+    section.principaisOfertas .row .cardProduto{
+        width: 240px;
+        margin: 0 3px 5px;
+    }
+}
+@media screen and (min-width: 1000px){
+
+    section.principaisOfertas .maisOfertas {
+        width: 239px;
+        padding: 5px;
+        margin-left: 79%;
+    }
+    header .header-desk{
+        display: block;
+    }
+    header .header-mobile {
+        display: none;
+    }
+    section.principaisOfertas .row{
+        flex-wrap: wrap;
+    }
+
+    footer {
+        background-color: black;
+    }
+    footer .rodapeSelos {
+        margin: 0 auto;
+        padding: 20px 20px 50px;
+        display: flex;
+    }
+    footer .rodapeSelos .formasPagamento, 
+    footer .rodapeSelos .certificadoSeguranca{
+        margin: 10px 0 0;
+        width: 50%;
+        padding: 0;
+    }
+    footer .rodapeSelos .certificadoSeguranca h4 {
+        margin: 0;
+    }
+    footer .rodapeInstitucional .d-flex{
+        justify-content: space-around;
+    }
+    footer .rodapeInstitucional div ul {
+        display: block;
+    }
+    footer .rodapeInstitucional div ul li a{
+        font-size: 80%;
+    }
+
+}
